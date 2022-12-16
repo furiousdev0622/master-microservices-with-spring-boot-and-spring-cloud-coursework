@@ -3,8 +3,6 @@ package com.in28minutes.rest.webservices.restfulwebservices;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import javax.transaction.UserTransaction;
 import java.net.URI;
 import java.util.List;
 
@@ -26,7 +24,11 @@ public class UserResource {
     //GET /users
     @GetMapping("/users/{id}")
     public User retrieveUser(@PathVariable int id){
-        return service.getUser(id);
+        User user = service.getUser(id);
+        if (user == null){
+            throw new UserNotFoundException("id: " + id);
+        }
+        return user;
     }
 
     //POST /users

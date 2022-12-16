@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class UserDaoService {
@@ -24,11 +25,8 @@ public class UserDaoService {
     }
 
     public User getUser(int id) {
-        User user =  users.stream().filter(e -> e.getId() == id).findFirst().get();
-        if (user == null){
-            throw new UserNotFoundException("id: " + id);
-        }
-        return user;
+        Optional<User> user =  users.stream().filter(e -> e.getId() == id).findFirst();
+        return user.isPresent() ? user.get() : null;
     }
 
     public User saveUser(User user) {
