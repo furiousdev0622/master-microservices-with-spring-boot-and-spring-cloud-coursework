@@ -29,6 +29,10 @@ public class UserDaoService {
         return user.isPresent() ? user.get() : null;
     }
 
+    public void deleteById(int id) {
+        users.removeIf(e -> e.getId() == id);
+    }
+
     public User saveUser(User user) {
         user.setId(++usersCount);
         users.add(user);
