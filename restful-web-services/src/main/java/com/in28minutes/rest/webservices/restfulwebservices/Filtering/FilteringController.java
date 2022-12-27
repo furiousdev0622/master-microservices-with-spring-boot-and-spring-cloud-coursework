@@ -1,6 +1,5 @@
 package com.in28minutes.rest.webservices.restfulwebservices.Filtering;
 
-import com.fasterxml.jackson.databind.ser.BeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
-import java.util.List;
 
 @RestController
 public class FilteringController {
