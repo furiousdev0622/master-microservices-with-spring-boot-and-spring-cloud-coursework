@@ -37,14 +37,14 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
-<!--&lt;!&ndash;		openapi swagger json at "v3/api-docs" and ui at "/swagger-ui/index.html&ndash;&gt;-->
+<!--		openapi swagger json at "v3/api-docs" and ui at "/swagger-ui/index.html-->
 <!--		<dependency>-->
 <!--			<groupId>org.springdoc</groupId>-->
 <!--			<artifactId>springdoc-openapi-ui</artifactId>-->
 <!--			<version>1.6.13</version>-->
 <!--		</dependency>-->
 
-<!--&lt;!&ndash;		content negotiation (XML, JSON, ENG, DB etc.)&ndash;&gt;-->
+<!--		content negotiation (XML, JSON, ENG, DB etc.)-->
 <!--		<dependency>-->
 <!--			<groupId>com.fasterxml.jackson.dataformat</groupId>-->
 <!--			<artifactId>jackson-dataformat-xml</artifactId>-->
